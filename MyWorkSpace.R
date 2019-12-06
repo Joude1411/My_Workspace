@@ -43,9 +43,6 @@ require(zoo)
 library(zoo)
 head(zoo)
 
-#just to check git pull
-
-
 columns <- quos(Metric_name, Indicator_Code)
 
 #data for for run chart
@@ -68,3 +65,5 @@ grp=paste(!!!columns, sep="_")
 RunData$sustained%>%
   separate(grp,sapply(columns,quo_name),sep="_") %>%
   View()
+
+#just to check git pull
